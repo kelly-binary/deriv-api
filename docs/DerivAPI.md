@@ -245,9 +245,9 @@
     -   [Parameters][241]
 -   [InMemory][242]
 -   [TransactionParams][243]
--   [ExpiryType][244]
+-   [ContractCategory][244]
     -   [Properties][245]
--   [ContractCategory][246]
+-   [ExpiryType][246]
     -   [Properties][247]
 -   [Immutable][248]
     -   [Parameters][249]
@@ -2459,18 +2459,6 @@ An in memory storage which can be used for caching
 
 Type: [Object][256]
 
-## ExpiryType
-
-Type: [Object][256]
-
-### Properties
-
--   `duration` **[DurationRange][301]** 
--   `barriers` **[Object][256]** 
-    -   `barriers.high` **[Barrier][302]** 
-    -   `barriers.low` **[Barrier][302]** 
-    -   `barriers.single` **[Barrier][302]** 
-
 ## ContractCategory
 
 Type: [Object][256]
@@ -2482,8 +2470,20 @@ Type: [Object][256]
 -   `contract_types` **[Array][274]&lt;[String][258]>** 
 -   `bases` **[Array][274]&lt;[String][258]>** 
 -   `forward_starting` **[Object][256]** 
-    -   `forward_starting.1564531200` **[DateRange][303]** 
--   `expiry_types` **[ExpiryType][304]** 
+    -   `forward_starting.1564531200` **[DateRange][301]** 
+-   `expiry_types` **[ExpiryType][302]** 
+
+## ExpiryType
+
+Type: [Object][256]
+
+### Properties
+
+-   `duration` **[DurationRange][303]** 
+-   `barriers` **[Object][256]** 
+    -   `barriers.high` **[Barrier][304]** 
+    -   `barriers.low` **[Barrier][304]** 
+    -   `barriers.single` **[Barrier][304]** 
 
 ## Immutable
 
@@ -3014,11 +3014,11 @@ Returns **Observable**
 
 [243]: #transactionparams
 
-[244]: #expirytype
+[244]: #contractcategory
 
 [245]: #properties-2
 
-[246]: #contractcategory
+[246]: #expirytype
 
 [247]: #properties-3
 
@@ -3128,12 +3128,12 @@ Returns **Observable**
 
 [300]: http://archive.geekwisdom.com/js/passwordmeter.js
 
-[301]: #durationrange
+[301]: #daterange
 
-[302]: #barrier
+[302]: #expirytype
 
-[303]: #daterange
+[303]: #durationrange
 
-[304]: #expirytype
+[304]: #barrier
 
 [305]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
